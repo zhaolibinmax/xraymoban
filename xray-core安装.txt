@@ -16,7 +16,7 @@ xray x25519
 
 nano /usr/local/etc/xray/config.json
 
-xray run -test -c config.json
+xray run -test -c /usr/local/etc/xray/config.json
 
 systemctl enable xray
 
