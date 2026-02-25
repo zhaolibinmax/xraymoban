@@ -10,7 +10,7 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 
 xray uuid
 
-openssl rand -hex 8
+xray wg
 
 xray x25519
 
