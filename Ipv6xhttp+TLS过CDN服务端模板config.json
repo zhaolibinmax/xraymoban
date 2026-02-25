@@ -1,0 +1,60 @@
+{
+  "log": {
+    "loglevel": "warning"
+    },
+  "dns": {
+    "queryStrategy": "UseIPv6v4",
+    "servers": [
+      "8.8.8.8",
+      "2001:4860:4860::8888"
+    ]
+  },
+  "inbounds": [
+    {
+     "listen": "0.0.0.0",
+     "port": 443,
+     "protocol": "vless",
+     "settings": {
+        "clients": [
+          {
+           "id": "1111111111"
+          }
+        ],
+        "decryption": "none"
+      },
+     "streamSettings": {
+        "network": "xhttp",
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "1111111111",    // 填写启用了 CDN 的域名
+          "alpn": ["h3","h2","http/1.1"],
+          "minVersion": "1.2",    // 为了安全起见，至少要求 TLS1.2
+          "certificates": [    // 用于验证服务器与 CDN 的TLS握手，可以  acme.sh 生成，也可以使用 CDN 提供的源服务器证书（如果有的话）
+            {
+              "certificateFile": "/etc/xray/fullchain.pem",    // 换成你的证书，绝对路径
+              "keyFile": "/etc/xray/privkey.pem"    // 换成你的私钥，绝 对路径
+            }
+          ]
+        },
+        "xhttpSettings": {
+          "host": "",    // 服务端可以留空，若不留空，客户端必须填与服务端相同的 host
+          "path": "/setup-a",    // 不要照抄，尽可能将 path 设置得复杂一些
+          "mode": "auto"
+        }
+      },
+     "sniffing": {
+        "enabled": true,
+        "destOverride": ["http", "tls", "quic"],
+        "metadataOnly": false
+      }
+     }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "UseIPv6v4"
+      }
+    }
+  ]
+}
