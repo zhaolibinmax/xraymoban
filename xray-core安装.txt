@@ -10,8 +10,6 @@ bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release
 
 xray uuid
 
-xray wg
-
 xray x25519
 
 nano /usr/local/etc/xray/config.json
