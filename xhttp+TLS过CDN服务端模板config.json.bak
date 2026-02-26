@@ -1,6 +1,8 @@
 {
   "log": {
-    "loglevel": "warning"
+    "loglevel": "warning",
+    "access": "/root/xray_log/access.log",
+    "error": "/root/xray_log/error.log"
   },
   "dns": {
     "queryStrategy": "UseIPv6v4",
