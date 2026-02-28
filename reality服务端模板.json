@@ -23,7 +23,12 @@
       {
         "type": "field",
         "domain": ["geosite:cn"],
-        "outboundTag": "direct"
+        "outboundTag": "block"
+      },
+      {
+        "type": "field",
+        "ip": ["geoip:cn"],
+        "outboundTag": "block"
       },
       {
         "type": "field",
