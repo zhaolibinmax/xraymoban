@@ -57,12 +57,12 @@
   "inbounds": [
     {
       "listen": "127.0.0.1",
-      "port": 11111,
+      "port": *****,
       "protocol": "vless",
       "settings": {
         "clients": [
           {
-            "id": "1111111111"
+            "id": "**********"
           }
         ],
         "decryption": "none"
@@ -70,7 +70,7 @@
       "streamSettings": {
         "network": "xhttp",
         "xhttpSettings": {
-          "path": "/1111111111"
+          "path": "/**********"
         }
       },
       "sniffing": {
