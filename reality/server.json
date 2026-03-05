@@ -61,7 +61,7 @@
       "settings": {
         "clients": [
           {
-            "id": "1111111111",
+            "id": "**********",
             "flow": "xtls-rprx-vision",
             "level": 0
           }
@@ -74,7 +74,7 @@
         "realitySettings": {
           "dest": "www.apple.com:443",
           "serverNames": ["www.apple.com"],
-          "privateKey": "11111111111",
+          "privateKey": "**********",
           "shortIds": ["a3f9"]
         }
       },
