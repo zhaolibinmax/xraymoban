@@ -97,7 +97,10 @@
   "outbounds": [
     {
     "protocol": "freedom",
-    "tag": "direct"
+    "tag": "direct",
+      "settings": {
+        "domainStrategy": "UseIPv4v6"
+      }
     },
     {
     "protocol": "blackhole",
