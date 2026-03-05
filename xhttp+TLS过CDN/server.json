@@ -5,7 +5,7 @@
     "error": "/var/log/xray/error.log"
   },
   "dns": {
-    "queryStrategy": "UseIPv6v4",
+    "queryStrategy": "UseIPv4v6",
     "servers": [
       "8.8.8.8",
       "2001:4860:4860::8888"
